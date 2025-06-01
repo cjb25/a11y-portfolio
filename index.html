@@ -1,0 +1,85 @@
+<!--this first line tells the browser that this is an HTML5 document-->
+<!DOCTYPE html>
+<!--this opens the HTML document and says the language used is English-->
+<html lang="en">
+  <!--The head holds all the behind the scenes setup for my the page-->
+  <head>
+    <!--this makes ure the letters, symbols and characters display correctly-->
+    <meta charset="UTF-8" />
+    <!--This makes the page adjust to different screen sizes (like mobile phones and tablets)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--This is the name that shows up in the browser tab-->
+    <title>CJ Berns A11y Portfolio</title>
+    <!--this connects my page to the external CSS file to control how things look-->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <!--this is the visible content of my site, everything inside of the <body> is what shows on the screen-->
+  <body>
+    <!--this container wraps the whole visible part of my page to help with the layout-->
+    <div class="container">
+      <!--Header section for logo and navigation-->
+      <!--the header holds my title and my navigation menu-->
+      <header>
+        <a href="#main" class="skip-link">Skip to main content</a>
+        <!--the main title that people will see first-->
+        <h1>Welcome to CJ Berns A11y Developer Portfolio</h1>
+        <!--Navigation menu so users can get to other pages-->
+        <!--this is the site menu so visitors can easily jump to other pages using links-->
+        <nav>
+          <ul>
+            <!--a list of links for different pages within my site-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about/about.html">About Me</a></li>
+            <li><a href="/growth/growth.html">Growth</a></li>
+            <li><a href="/projects/projects.html">Projects</a></li>
+            <li><a href="/contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--main content goes here, and each section can have a heading and text-->
+      <main>
+        <!--what does A11y mean-->
+        <section>
+          <h2>What is A11y?</h2>
+          <p>
+            "A11y" is short for "accessibility." There are 11 letters between
+            the "A" and the "Y", and developers use it as shorthand. Accessibile
+            means websites can be used by everyone, including people who are
+            blind, visually impaired, use screen readers, or have other access
+            needs.
+          </p>
+        </section>
+        <!--why accessibility matters to me-->
+        <section>
+          <h2>Why It Matters</h2>
+          <p>
+            I'm a legally blind developer-in-training, so this isn't just
+            something I'm passionate about, it's my way of life. This portfolio
+            is a living demonstration for my peers, instructors, and future
+            collaborators and employers. I am transparent with my lived
+            experience, hoping to increase awareness and show how accessibility
+            can be meaningful, practical, and creative.
+          </p>
+        </section>
+        <!--Invitation to try testing with free accessibility tools-->
+        <section>
+          <h2>Try It Yourself</h2>
+          <p>
+            As you explore my site, you'll learn several ways to test
+            accessibility using the tools I am most familiar with - JAWS, NVDA,
+            VoiceOver, as well as keyboard navigation. You'll have the
+            opportunity to experience firsthand the importance of building more
+            inclusive designs from the start.
+          </p>
+        </section>
+      </main>
+
+      <!--the footer stays at the bottom and will repeat on each page to provide site creation info-->
+      <footer>
+        <p>
+          &copy; 2025 CJ BERNS A11y Portfolio - Built with care, on purpose.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

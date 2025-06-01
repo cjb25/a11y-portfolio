@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--the root element of the HTML doc. "lang='en'" helps screen readers know the language of the page-->
+<html lang="en">
+    <!--the <head> holds metadata and links that arent shown directly on the page-->
+<head>
+    <meta charset="UTF-8"><!--haracter encoding to make sure special characters show up correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--helps the page scale correctly on mobile devices-->
+    <!--the title that shows in the browser tab-->
+    <title>Learning Journey</title>
+    <!--linking to external CSS so I can style things seperately-->
+    <link rel="stylesheet" href="/css/styles.css" />
+    
+</head>
+<body>
+    <!--letting keyboard and screen reader users skip past the navigation and get straight to the content-->
+  
+
+    <div class="container">
+    
+    <header>
+          <a href="#main" class="skip-link">Skip to main content</a>
+        <!--an empty div set as an anchor point for back to top link-->
+        <div id="top"></div>
+        <!--main site navigation, important for screen reader-->
+        <nav>
+
+            <ul>
+                <!--each link is a list item that helps screen readers announce the structure clearly-->
+                <li>
+                    <a href="/index.html">Home</a>
+                     <li><a href="/about/about.html">About Me</a></li>
+                     <!--this is my current page, so aria-current "page" tells my screen reader that this is an active link-->
+                      <li><a href="/growth/growth.html" aria-current="page">Growth</a></li>
+          <li><a href="/projects/projects.html">Projects</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
+                </li>
+              
+            </ul>
+        </nav>
+    </header>
+    
+    <!--my main content starts here, the role="main" helps assistive tech know this is the primary content area-->
+    <main id="main" role="main">
+        <!--this is a secondary navigation just for jumping to page sections-->
+        <nav aria-label="Section navigation" class="page-nav">
+            <!--this is a hidden heading for screen readers, making the section menu understandable-->
+            <h2 class="sr-only">Page Sections</h2>
+            <ul>
+                <li><a href="#lesson-html-intro">Intro to HTML</a></li>
+                <li><a href="#lesson-css-intro">Intro to CSS</a></li>
+                <li><a href="#lesson-js-intro">Intro to JavaScript</a></li>
+         
+            </ul>
+        </nav>
+        <!--page title, first thing seen by people-->
+        <h1>My Learning Journey: From Survivor to Accessibility Champion</h1>
+        <!--personal introduction explaining what my journey means-->
+        <p>This is where I document my journey through web development, accessibility, and self-advocacy. Each entry will include both code concepts and what they mean in the context of surviving and thriving, with disability and trauma. </p>
+    <!--start of my HTML section aria-labelldby ties this section to the heading so my screen reader can announce it-->
+<section id="lesson-html" aria-labelledby="heading-html">
+    <h2 id="heading-html">Introduction to HTML & Real Accessibility</h2>
+   <!--personal reflections on what I've learned-->
+    <p><strong>What I Learned:</strong> I began learning about HTML elements, structure, headings, links, images, and basic accessibility principles like using alt text for screen readers. Accessibility wasn't fully integrated into this stage. ARIA roles and attributes weren't covered at all, and I had no clue what aria-current was. I now realize this is where the foundations of accessibility are important, and should be introduced. I only began learning ARIA on my own after running into major barriers during an intro to JavaScript and form development. That's when surviving stopped being enough, and I had to build access just to participate. </p>
+    
+    <!--An image with alt text that describes the visual in a meaningful way-->
+    <figure>
+        <img src="/images/my-notion-face-transparent.webp" alt="illustration of a woman with shoulder-length hair, wearing glasses, looking forward with a curious half-smile. Black background, white sketch art." width="300"/>
+        <figcaption>My profile icon. This is how I choose to be seen, even when I'm unseen.</figcaption>
+    </figure>
+    <!--personal impact statement-->
+    <blockquote> I didn't become an accessibility advocate because I wanted to. I became one because I had no choice. In order to learn, build, and thrive, I had to make web work for me.</blockquote>
+    <br>
+    <!--Prohject example with link-->
+    <p>View my <a href="/projects/projects.html#box-model">Box Model & Accessibility project</a>, where I explore basic layout styling while reflecting on accessibility for screen readers and keyboard users.</p>
+    <!--another personal reflection-->
+    <p><strong>Why it matters:</strong> I'm legally blind, but that's not always obvious. I wear glasses without lenses, not for vision correction, but for confidence. They don't improve my vision, but they help me feel seen. I didn't become an accessibility advocate because I wanted to. I became one because I had no choice.In order to learn, build, and thrive, I had to make the web work for me.</p>
+    <!--listing thought provoking accessibility considerations-->
+    <h3><strong>Curiosities & Accessible Brainstorming:</strong></h3>
+    <ul>
+        <li>What if accessibility wasn't treated as an "advanced" topic? What if it was baked into HTML from day one?</li>
+    <li>Could code tutorials simulate screen reader behavior to teach developers how their choices impact real users?</li>
+<li>Why does alt text often feel like it's being written for compliance, instead of communication?</li>    
+</ul>
+<br>
+<!--real-world accessitive tech use-->
+<h4><strong> Assistive Tech Log:</strong></h4>
+<p>I'm still adjusting to vision loss. I've only been legally blind since 2020. For assistive technology, I regularly alternate between <a href="https://support.apple.com/guide/voiceover/welcome/mac" target="_blank" rel="noopener noreferrer">VoiceOver on Mac</a> , <a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank" rel="noopener noreferrer">JAWS on Windows</a> , and <a href="https://www.nvaccess.org/about-nvda/" target="_blank" rel="noopener noreferrer">NVDA</a> when JAWS breaks. Each screen reader has its own logic, with unique strengths and limitations, their own quirks. The learning curve is steep, and that's before you even get to the code. Built-in accessibility tools help, but knowing how the markup behaves under each system is what's making the biggest difference. I often have to use all three tools to navigate efficiently.</h4>
+<!--reference links to tools and standards-->
+    <h3><strong>Resources & References:</strong></h3>
+<ul>
+    <!--a link that explains what aria-current (the attribute I'm using in my nav) does-->
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current" target="_blank" rel="noopener">MDN Web Docs: What is aria-current? </a></li>
+<li><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener">WebAIM Contrast Checker</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank" rel="noopener">W3C Alt Text Decision Tree</a></li>
+<li><a href="https://axesslab.com/alt-texts/" target="_blank" rel="noopener">Axess Lab: 5 Myths About Alt Text</a></li>
+</ul>
+<br>
+</h3> 
+<!--personal perspective on alt text-->
+<p><strong>Note:</strong> I often hear advice to 'keep alt text short', but as someone who depends on it, I want the details. If there's a painting on a website, I don't just want "a woman." I want to know what she's wearing, how she's positioned, what the colors are like. Good alt text is not just compliance, it's storytelling in a way that allows the user to visualize.</p>
+<!--back to top link for keyboard navigation-->
+<p><a href="#top">Back to top</a></p>
+</section> 
+<!--CSS learning section-->
+<section id="lesson-css-intro" aria-labelledby="heading-css">
+    <h2 id="heading-css">Introduction to CSS & Styling Accessibly</h2>
+    <!--reflections on challenges of visual styles when I cant see them-->
+    <p>Learning CSS was incredibly challenging for me. I had to find alternative ways to "see" what I was creating. CSS is all about styling - colors, layout, font-size, positioning - things that are vsiual by nature. My learning style had to shift dramatically. I leaned heavily upon my screen readers and borrowed volunteer human eyes to understand what was happening on the screen. </p>
+<p>When CSS isn't accessible, it's not just an oversight. It can block someone entirely from learning or using we've built.</p>
+<h3>What I Learned:</h3>
+<!--listing basic CSS takeaways-->
+<ul>
+    <li>CSS means "Cascading Style Sheets", and it controls how the HTML looks.</li>
+    <li>You can change fonts, colors, layouts, padding, margins, and more.</li>
+    <li>Selectors target what gets styled.</li>
+    <li>The "cascade" part means that the order and specificity of rules matter.</li>
+</ul>
+<!--link to prject using CSS-->
+<p>You can check out one of my very first CSS projects <a href="/projects/projects.html#css-projects">here</a>.</p>
+<!--personal questions about visual styling using assistive tech-->
+<h3>Curiosities & Accessible Brainstorming</h3>
+<ul>
+    <li>How do people who can't see color choose accessible color combinations?</li>
+    <li>Is there a way to write CSS that's screen reader friendly from the ground up? </li>
+    <li>Could browser tools like "Reader Mode" become a part of our design process?</li>
+</ul>
+<br>
+<!--a log for learning-->
+<h4>Assistive Tech Log:</h4>
+<br>
+<p>I'm still adapting to my vision loss...</p>
+<p>One way I double check that a page is structured well is by using the browser's Reader Mode. It shows a cleaner version of the content and helps catch problems with layout or structure, and is especially helpful when using assistive technology.</p>
+<!--encouraging others to try using the tools available for testing-->
+<h5>YOU CAN TRY THIS!</h5>
+<br>
+<p><strong>How to use Reader Mode:</strong></p>
+
+<ul>
+    <li>
+        <a href="https://www.bemyeyes.com/" target="_blank"> Be My Eyes</a>: A volunteer based app that helped me understand layout, color, and spacing.
+    </li>
+    <li><a href="https://www.nvaccess.org/download/" target="_blank">NVDA Screen Reader</a> was used to hear what my code sounded like.
+
+    </li>
+    <li><a href="https://www.freedomscientific.com/products/software/jaws" target="_blank">JAWS Screen Reader</a> also tested how navigation and styles were interpreted.</li>
+    <li>Reader Mode (try this!):</li>
+    <ul>
+        <li><strong>FireFox:</strong> Press F9 or click the page icon in the address bar.</li>
+        <li><strong>Safari:</strong> Click the page icon on the far left side of the address bar (if available), or use the "View > Show Reader" menu.</li>
+    </ul>
+</ul>
+
+</section>
+<p><a href="#top">Back to top</a></p>
+<!--JavaScript section placeholder-->
+<section id="lesson-js-intro" aria-labelledby="heading-js">
+    <h2 id="heading-js">Introduction to JavaScript & Interactive Design</h2>
+    <p>Coming Soon</p>
+</section>
+<p><a href="#top">Back to top</a></p>
+   </main>
+</div>
+<!--footer with short note-->
+  <footer>
+      <p>&copy; 2025 CJ BERNS A11y Portfolio - Built with care, on purpose.</p>
+    </footer>
+</body>
+
+</html>

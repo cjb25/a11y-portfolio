@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!--skip link added to give screen reader and keyboard users faster access to content-->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="container">
+    <header>
+      <nav aria-label="main site navigation">
+        <ul>
+          <!--aria current is used for current page link-->
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about/about.html">About Me</a></li>
+           <li><a href="/growth/growth.html">Growth</a></li>
+          <li><a href="/projects/projects.html" aria-current="page">Projects</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header><!--one main per page-->
+    <main id="main-content" role="main">
+      <!--section specific nav to help orient people quickly-->
+        <nav aria-label="Project section navigation" class="project-nav">
+            <h2 class="sr-only">Project Sections</h2>
+            <ul>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#js">JavaScript</a></li>
+                <li><a href="#pp">Personal Projects</a></li>
+             
+         
+            </ul>
+        </nav>
+    
+      <!--first section, project intro-->
+      <section id="html" aria-labelledby="html section">
+          <h1>Course: Introduction to programming</h1>
+        <h2>Week 1: Box Model</h2>
+        <!--a visual reference for the original version-->
+        <figure>
+          <!--screenshot of original project-->
+          <img
+            src="/images/box model.png"
+            alt="Screenshot of styled HTML page with colored boxes and text."
+            width="600"
+          />
+          <figcaption>
+            Original layout showing CSS box model styling.
+          </figcaption>
+        </figure>
+
+        <!--intro paragraph-->
+        <p>
+          One of my earliest assignments asked me to explore how inline and block elements behave in the box model. My instructor encouraged me to experiment with borders and spacing to see the visual layout more clearly.</p> 
+          <p>
+            These visual cues were not accessibile to me in the traditional way. I relied on trial, logic, and support. I experimented with red borders so I could faintly detect them. I used
+           <a href="https://www.bemyeyes.com/" target="_blank" rel="noopener"
+            >Be My Eyes</a> to borrow sighted guidance, and I asked thoughtful follow-up questions when I couldnt confirm what I had changed.  
+            </p>
+            <p>This beginner project is a great example of how important it is to structure layouts that work for everyone, including the deceloper behind the screen. </p>
+            <p>View On<a
+            href="https://codepen.io/CJ-Berns/pen/bNGNMQE?editors=0110"
+            target="_blank"
+            rel="noopener"
+            > 
+         CodePen </a></p>
+            
+      
+        <!--second section, improved accessible version-->
+        <section id="box-model-accessibility">
+          <h2>Accessible Exploration</h2>
+          <!--screenshot of improved version-->
+          <figure>
+            <img
+              src="/images/accessible-box-model.png"
+              alt="Screenshot of keyboard accessible HTML page with colored boxes and texts"
+              width="600"
+            />
+            <figcaption>
+              Updated layout with semantic HTML and accessible navigation.
+            </figcaption>
+          </figure>
+        </section>
+        <!--reflection on accessibility and learning-->
+        <p>
+       After learning more about accessibility, I revistied this project to improve its structure for keyboard users an screen readers. This version includes clearer focusable elements, a <code>skip to main content</code> link, and improved semantic HTML. Making these changes helped me connect thhe technical side of accessibility with the lived experience of using assistive technology, and why it matters.</code>
+        </p>
+        <p>
+          I then rebuilt the project to include accessible focusable components,
+          ARIA attributes, and a "Skip to main content".
+        </p>
+        <!--Invitation to try the accessible demo-->
+        <p>
+          <!--updated version with instructions-->
+          <strong>Try it yourself:</strong> View my updated, accessible version
+          on
+          <a
+            href="https://codepen.io/CJ-Berns/pen/raVVKrz"
+            target="_blank"
+            rel="noopener"
+          >
+            CodePen</a
+          ><div class=""></div>
+        </p>
+        <!--keyboard navigation help-->
+        <p>Use your keyboard to navigate:
+          <ul><li>
+            Press <kbd>Tab</kbd> to move forward through links, buttons, and form elements. 
+          </li>
+        <li>Use <kbd>Shift</kbd>+ <kbd>Tab</kbd> to move backward.</li>
+      <li>When a link is focused, press <kbd>Enter</kbd> to activate.</li></ul>
+        </p>
+        <p>As you tab through, notice how the "Skip to main content" link appears first and the headigns and links follow a logical, usable order. This helps people like me who rely on keyboards or screen readers have the same access as mouse users.</p>
+
+      
+      </section>
+      <!--placeholder sections-->
+      <section id="css" aria-labelledby="css-heading">
+        <h2 id="css-heading">CSS Projects</h2>
+<!--add a description, or a challenge and how it was made accessible-->
+      </section>
+      <section id="js" aria-labelledby="js-heading">
+        <h2 id="js-heading">JavaScript Projects</h2>
+        <!--add an interactive feature or form that I rebuilt with accessibility in mind-->
+      </section>
+      <section id="pp"  aria-labelledby="pp-heading">
+        <h2 id="pp-heading">Presonal Projects</h2>
+        <!--inviting people into my story, what I'm building, who its for, and why it matters-->
+      </section>
+      <!--navigation back to growth-->
+        <nav><a href="/learning/learning.html">Back to Growth Page</a></nav>
+    </main>
+    </div>
+    <footer>
+      <p>&copy; 2025 CJ BERNS A11y Portfolio - Built with care, on purpose.</p>
+    </footer>
+  </body>
+</html>

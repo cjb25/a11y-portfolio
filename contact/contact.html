@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!--skip link for keyboard-->
+     <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="container">
+    <header>
+        <div id="top"></div>
+        <nav aria-label="main site navigation">
+            <ul>
+                <li>
+                    <a href="/index.html">Home</a>
+                     <li><a href="/about/about.html">About Me</a></li>
+                         <li><a href="/growth/growth.html">Growth</a></li>
+          <li><a href="/projects/projects.html">Projects</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
+                </li>
+             
+            </ul>
+        </nav>
+    </header>
+    <!--main content starts right here-->
+    <main id="main" role="main">
+        <p>If you'd like to connect, collaborate, or ask me questions, I'd love to hear from you! I welcome thoughtful conversation, especially around accessibility, advocacy, and inclusive designs for meaningful projects and profound social impact. </p>
+     <!--contact form for accessibility friendly interaction, I am using form spree to recieve my messages-->
+     <form action="https://formspree.io/f/xovwagbb" method="POST">
+        <fieldset>
+            <legend>Send me a message</legend>
+            <!--name input-->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required/>
+            <!--email input-->
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required/>
+            <!--message text area-->
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+               <button type="submit">Send Message</button>
+        </fieldset>
+             </form>
+     <section aria-labelledby="alt-contact-heading"><h2>Other Ways to Reach Me</h2>
+    <p>You can also find me on:</p>
+    <ul>
+        <li><a href="https://github.com/cjb25" target="_blank" rel="noopener">GitHub</a></li>
+       <li> <a href="mailto:cjandersondetroit@gmail.com">Email</a></li>
+       <li><a href="https://www.instagram.com/cjberns/">Instagram</a></li>
+       <li><a href="https://profile.indeed.com/p/crystala-5fumnfc">Indeed</a></li>
+       <li><a href="https://www.linkedin.com/in/cjberns25">LinkedIn</a></li>
+    </ul> 
+    </section>
+    </main>
+</div>
+      <footer>
+      <p>&copy; 2025 CJ BERNS A11y Portfolio - Built with care, on purpose.</p>
+    </footer>
+  </body>
+</body>
+</html>
